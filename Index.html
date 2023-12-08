@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic E-commerce Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <header>
+        <a href="Index.html">
+        <h1><img src="Images\logo.png"></img></h1>
+        </a>
+                <ul><a href="home.html">Home</a></ul>
+                <ul><a href="Policies.html">Policies</a></ul>
+                <ul><a href="Index.html">Product</a></ul>
+                
+        <div class="dropdown" style="text-align: right;">
+            <button>Options</button>
+            <div class="dropdown-content">
+                <a href="home.html">Home</a>
+                <a href="Policies.html">Policies</a>
+                <a href="Index.html">Product</a>
+            </div>
+        </div>
+    </header>
+
+<body>
+<main>
+    <h1 style="color: blueviolet; text-decoration: underline; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">OUR PRODUCTS</h1>
+    <section class="content-grid">
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="1" data-item-name="Package 1" data-item-price="2188" data-item-image="Images/package 1.jpeg">PACKAGE SET</h2>
+                <img src="Images/package 1.jpeg" alt="Package1">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+    
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="2" data-item-name="Package 2" data-item-price="2188" data-item-image="Images\package 2.png">POS TABLET</h2>
+                <img src="Images\package 2.png" alt="Package2">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+    
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="3" data-item-name="Package 3" data-item-price="2188" data-item-image="Images\package 3.png">CASH DRAWER</h2>
+                <img src="Images\package 3.png" alt="Package3">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="4" data-item-name="Package 4" data-item-price="2188" data-item-image="Images\package 4.png">PRINTER</h2>
+                <img src="Images\package 4.png" alt="Package4">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="5" data-item-name="Package 5" data-item-price="2188" data-item-image="Images\package 5.png">TERMINAL</h2>
+                <img src="Images\package 5.png" alt="Package5">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="6" data-item-name="Package 6" data-item-price="2188" data-item-image="Images\package 6.png">PAPER ROLL</h2>
+                <img src="Images\package 6.png" alt="Package6">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+            <div class="grid-item">
+                <h2 style="text-decoration: underline;" data-item-id="7" data-item-name="Package 7" data-item-price="2188" data-item-image="Images\package 7.png">BAR CODE SCANNER</h2>
+                <img src="Images\package 7.png" alt="Package7">
+                <button class="buy-button" onclick="addToCart(this)">ADD TO CART</button>
+                <p class="p2">RM 2188</p>
+            </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="Addtocart.js"> </script>
+
+    <div id="modalOverlay" onclick="toggleCart()"></div>
+    
+        <div id="showCart" onclick="toggleCart()">🛒</div>
+        <div id="cart">
+        <div id="closeCart" onclick="toggleCart()" style="text-decoration: double; color: red;">✖</div>
+        <h2 style="color: blueviolet; text-align: center; text-decoration: underline;">CART</h2>
+        <ul id="cartItems"></ul>
+        <p style="text-align: center;"><span id="totalPrice">RM 0.00</span></p>
+        <div id="checkoutButton" onclick="checkout()">Checkout</div>
+    </div>
+    <div id="cartBadge"></div>
+
+<script src="cart.js">    
+</script>
+
+<div id="confirmationPopup">
+    <p>Are you sure you want to proceed with the order?</p>
+    <button class="yes-button" onclick="confirmOrder()">Yes</button>
+    <button class="no-button" onclick="cancelOrder()">No</button>
+</div>
+
+<script>
+
+function showConfirmationPopup() {
+const confirmationPopup = document.getElementById('confirmationPopup');
+confirmationPopup.style.display = 'block';
+}
+
+
+function hideConfirmationPopup() {
+const confirmationPopup = document.getElementById('confirmationPopup');
+confirmationPopup.style.display = 'none';
+}
+
+
+function confirmOrder() {
+
+hideConfirmationPopup();
+const cartData = encodeURIComponent(JSON.stringify(cart));
+
+window.location.href = `payment.html?cart=${cartData}`; // Replace 'payment.html' with the actual URL of your payment page
+}
+
+function cancelOrder() {
+hideConfirmationPopup();
+}
+</script>
+
+</main>
+</body>
+
+<footer>
+    <h3>Copyright 2023 &copy; Dinesoft Sdn Bhd. All rights reserved.<br><strong> Point of Sales System | Malaysia POS System Supplier | POS Software | F & B System | Retail System </strong></h3>
+</footer>
+</html>

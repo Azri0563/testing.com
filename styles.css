@@ -1,0 +1,618 @@
+/*Class for all of the main component such as header etc*/
+header{
+    background-color: rgb(216, 215, 215);
+    padding: 10px;
+    box-shadow: 0 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   }
+
+body{
+    background: linear-gradient(to right, rgb(203, 227, 243), rgb(191, 255, 251), rgb(77, 163, 255));
+    animation: gradientAnimation 10s infinite alternate;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5 ease;
+    }
+    @keyframes gradientAnimation {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+
+a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    }
+
+a:hover{
+    text-decoration: underline; /* Add underline on hover if desired */
+    }
+
+section {
+    background: linear-gradient(to right, rgb(203, 227, 243), rgb(191, 255, 251), rgb(77, 163, 255));
+    animation: gradientAnimation 10s infinite alternate;
+    min-height: 30vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+img{
+    max-width: 100%; 
+    height: auto; 
+    display: flex; 
+    margin: 0 auto;
+}
+    
+footer{
+    background-color: rgb(226, 226, 226);
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    }
+
+/*End of Class for all main component*/
+
+/*Sign In Button class*/
+
+.sign-in-container {
+    margin-left: auto;
+}
+
+.sign-in {
+    background-color: #c3c3c3; 
+    color: white;
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    margin-left: 10px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.sign-in:hover {
+    background-color: #0052eb; 
+}
+
+/*End of Class For Sign In button class*/
+
+/*Class for the classes in html*/
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.p2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center; 
+    text-decoration: underline;
+}
+
+.try-now-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.try-now-button {
+    display: inline-block;
+    padding: 25px 100px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.try-now-button:hover {
+    background-color: #2e29b9;
+}
+
+.try-now-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
+    transition: left 0.3s;
+}
+
+.try-now-button:hover:before {
+    left: 100%;
+}
+
+/* End of class for classes in html */
+
+/*Class for Navigation*/
+.dropdown {
+    margin-left: auto;
+}
+/* Style for the button */
+.dropdown button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #777;
+}
+
+/* Styles for the dropdown content */
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 80px;
+    right: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+/*End class of Navigation*/
+
+/*class in about us*/
+.company-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.company-info {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.image {
+    max-width: 50%; 
+    height: auto; 
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+/*End Class for about us*/
+
+/*Class for ITEM LIST*/
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
+  
+.grid-item {
+  width: 320px;
+  height: 450px;
+  background-color: #d3f0ff;
+  color: #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item img {
+width: 100%;
+height: 270px;
+object-fit: cover;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+  
+.grid-item:hover {
+    background-color: #43f6ff;
+}
+
+.buy-button {
+    display: fill;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: #2a6e2d;
+  }
+
+/*End of class for ITEM LIST*/
+
+/*Cart Class*/
+#cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(228, 252, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    max-height: 50vh;
+    max-width: 100vh;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: auto;
+}
+
+#cartItems2 {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: auto;
+}
+
+#closeCart {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#showCart {
+    cursor: pointer;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    font-size: 35px;
+    color: blueviolet;
+}
+
+#cartBadge {
+    position: fixed;
+    top: 165px;
+    right: 10px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#checkoutButton {
+    background-color: #4CAF50; /* Green background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding for better appearance */
+    text-align: center; /* Center-align text */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.remove-btn {
+    background-color: #ff6666; /* Adjust the background color */
+    color: #000000; /* Adjust the text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff3333; 
+}
+
+#confirmationPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.yes-button, .no-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.yes-button {
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
+
+.no-button {
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+#confirmationPopup button {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#confirmationPopup button.yes-button {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+#confirmationPopup button.no-button {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+#returnToMenuBtn {
+    background-color: rgb(255, 61, 61); 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+#returnToMenuBtn:hover {
+    background-color: #c60505;
+}
+
+/* Style for Proceed Payment button */
+#proceedPaymentBtn {
+    background-color: #008CBA; /* Blue background color */
+    color: rgb(0, 0, 0); /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+#proceedPaymentBtn:hover {
+    background-color: #007AAB; /* Darker blue on hover */
+}
+
+#cancelOrderPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 220, 188);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup h2 {
+    color: #333;
+}
+
+.popup p {
+    color: #555;
+}
+
+.popup button {
+    background-color: #3db2ca;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background-color: #0077ff;
+}
+/*End of Class for Cart*/
+
+/*Class for Payment Confirmation FORM*/
+
+.form-container {
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto; /* Added to center the form horizontally */
+    display: flex; /* Added to use flexbox layout */
+    flex-direction: column; /* Added to stack child elements vertically */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #53edf5;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+}
+.form-container input:hover{
+    background-color: #327aff;
+}
+
+.form-container input[type="file"] {
+    margin-top: 5px;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+/*End of Class for Payment Confirmation FORM*/

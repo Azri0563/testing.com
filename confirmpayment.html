@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic E-commerce Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <header>
+        <a href="Index.html">
+        <img style="text-align: center;" src="Images\logo.png"></img>
+        </a>
+    </header>
+
+<body>
+    <main>
+        <section>
+        <form class="form-container" action="submit_payment.php" method="post" enctype="multipart/form-data">
+            <h1 style="color: blueviolet; text-decoration: underline; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">PAYMENT INFORMATION</h1>
+            <p style="align-items: center; text-align: center;"> Payment Account: <strong>Upstream Solutions - 562843569940 (MAYBANK)</strong><p></p>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="paymentDate">Payment Date:</label>
+            <input type="date" id="paymentDate" name="paymentDate" required>
+    
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{7,8}" placeholder="123-4567890" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="proofOfPayment">Payment Receipt:</label>
+            <input type="file" id="proofOfPayment" name="proofOfPayment" accept="image/*" required>
+    
+            <input type="submit" value="Submit">
+        </form>
+        </section>
+
+    </main>
+</body>
+
+<footer>
+    <h3>Copyright 2023 &copy; Dinesoft Sdn Bhd. All rights reserved.<br><strong> Point of Sales System | Malaysia POS System Supplier | POS Software | F & B System | Retail System </strong></h3>
+</footer>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic E-commerce Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <header>
+        <img style="text-align: center;" src="Images\logo.png"></img>
+    </header>
+
+<body>
+<main>
+
+    <section style="text-align: center;">
+        <h1 style="color: blueviolet; text-decoration: underline; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Payment Page</h1>
+
+        <h2>Items in Cart</h2>
+        <div id="cartItems2" style="max-width: 40%;"></div>
+
+        <h2 style="text-align: center; font-weight: bolder;">TOTAL PRICE</h2>
+        <p id="totalPrice" style="text-align: center;"></p>
+    
+        <!-- Payment method selection -->
+        <h2 style="color: blueviolet;">PAY BY TRANSFERING THE TOTAL AMOUNT TO THIS ACCOUNT NUMBER</h2>
+        <form style="text-align: center;" action="payment.php" id="paymentForm">
+            <label>
+                <input type="radio" name="paymentMethod" value="selfPickup" checked>
+                Online Banking: <strong style="font-size: 26px; color: black;">Upstream Solutions - 562843569940 (MAYBANK)</strong>
+            </label>
+            <br></br>
+            <button id="returnToMenuBtn" type="button" onclick="confirmReturnToMenu()">Clear All Item</button>
+            <button id="proceedPaymentBtn" type="button" onclick="processPayment()">Proceed Payment</button>
+        </form>
+        <p style="align-items: center; text-align: center;">Make sure to do Payment first before clicking on the <strong>PROCEED PAYMENT</strong> button.<p></p>
+
+        <div id="cancelOrderPopup" class="popup">
+            <p>Are you sure you want to cancel your order?</p>
+            <button class="yes-button" onclick="returnToMenuConfirmed()">Yes</button>
+            <button class="no-button" onclick="hideCancelOrderPopup()">No</button>
+        </div>
+
+        <div id="thankYouPopup" class="popup">
+            <div class="popup-content">
+                <h2>Thank You For Your Order</h2>
+                <p style="text-align: center;">Please Proceed the Payment and Make Sure to <strong>SAVE</strong> and <strong>SEND</strong> the Receipt in the Next Page</p>
+                <button onclick="returnToMenu()">Proceed Payment</button>
+            </div>
+        </div>
+        </section>
+
+        <script src="payment.js"> </script>
+
+</main>
+</body>
+
+<footer>
+    <h3>Copyright 2023 &copy; Dinesoft Sdn Bhd. All rights reserved.<br><strong> Point of Sales System | Malaysia POS System Supplier | POS Software | F & B System | Retail System </strong></h3>
+</footer>
+
+</html>
